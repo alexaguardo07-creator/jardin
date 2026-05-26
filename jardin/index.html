@@ -40,6 +40,18 @@
           font-size: 3.5rem;
         }
       }
+       button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #a2cf88;
+        }
     </style>
 
     
@@ -134,20 +146,120 @@
       <div class="col-lg-4">
 <img  class="bd-placeholder-img rounded-circle" width="140" height="140"  src="./217a3433-11b9-423f-9074-757a61aa53f0.jpg" alt="">
         <h2>Cardón</h2>
-        <p>tipo de cactus gigante nativo de zonas áridas.</p>
+        <p id="parrafo-a-leer" class="texto-lectura">tipo de cactus gigante nativo de zonas áridas.</p>
         <p><a class="btn btn-secondary" href="https://laderasur.com/infografias/cardon-un-cactus-que-toca-el-cielo/?srsltid=AfmBOoq9w_sypxVDbGqGM0mGsiKDtp8nqUONn5WS1Ch11rLOhJ-8PNRY">Ver detalles &raquo;</a></p>
+           <button id="btn-escuchar">Escuchar párrafo</button>
+
+
+      <script>
+    const btnEscuchar = document.getElementById('btn-escuchar');
+    
+    // Capturamos el párrafo por su ID
+    const parrafo = document.getElementById('parrafo-a-leer');
+
+    if ('speechSynthesis' in window) {
+        
+        btnEscuchar.addEventListener('click', () => {
+            // Cancelar cualquier reproducción previa activa
+            window.speechSynthesis.cancel();
+
+            // Extraemos el texto limpio del párrafo usando textContent
+            const textoLimpio = parrafo.textContent.trim();
+
+            if (textoLimpio) {
+                const utterance = new SpeechSynthesisUtterance(textoLimpio);
+                utterance.lang = 'es-ES'; // Idioma configurado en español
+                
+                // Reproducir
+                window.speechSynthesis.speak(utterance);
+            }
+        });
+
+    } else {
+        alert("Tu navegador no soporta la reproducción de voz.");
+    }
+</script>
+
+
+
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
   <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="./275f15c3-58d8-4a94-acd1-59c23a8e28c8.jpg" alt="">
         <h2>Torote</h2>
-        <p> árboles nativos de los montes de B.C.S. La tradición herbolaria dice que posee diversas propiedades medicinales</p>
+        <p id="parrafo-a-leer2" class="texto-lectura"> árboles nativos de los montes de B.C.S. La tradición herbolaria dice que posee diversas propiedades medicinales</p>
         <p><a class="btn btn-secondary" href="https://remedia.bio/torote/">ver más &raquo;</a></p>
+          <button id="btn-escuchar2">Escuchar párrafo</button>
+
+
+      <script>
+    const btnEscuchar2 = document.getElementById('btn-escuchar2');
+    
+    // Capturamos el párrafo por su ID
+    const parrafo2 = document.getElementById('parrafo-a-leer2');
+
+    if ('speechSynthesis' in window) {
+        
+        btnEscuchar2.addEventListener('click', () => {
+            // Cancelar cualquier reproducción previa activa
+            window.speechSynthesis.cancel();
+
+            // Extraemos el texto limpio del párrafo usando textContent
+            const textoLimpio2 = parrafo2.textContent.trim();
+
+            if (textoLimpio2) {
+                const utterance2 = new SpeechSynthesisUtterance(textoLimpio2);
+                utterance2.lang = 'es-ES'; // Idioma configurado en español
+                
+                // Reproducir
+                window.speechSynthesis.speak(utterance2);
+            }
+        });
+
+    } else {
+        alert("Tu navegador no soporta la reproducción de voz.");
+    }
+</script>
+
+
+
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
   <img class="bd-placeholder-img rounded-circle" width="140" height="140"  src="./64dfc147-aa88-4e02-a486-56f45a81b579.jpg" alt="">
         <h2>Pitayo dulce</h2>
-        <p>La pitaya es una cactácea que mide hasta 8 metros de altura, tiene entre 5 y 35 tallos que se desarrollan desde la base de la planta.</p>
+        <p id="parrafo-a-leer3" class="texto-lectura">La pitaya es una cactácea que mide hasta 8 metros de altura, tiene entre 5 y 35 tallos que se desarrollan desde la base de la planta.</p>
         <p><a class="btn btn-secondary" href="https://redescubramossonora.mx/renaturasonora/plantas-renatura/stenocereus-thurberi-engelm-buxb-o-pitahaya-dulce/">View details &raquo;</a></p>
+       <button id="btn-escuchar3">Escuchar párrafo</button>   
+       
+        <script>
+    const btnEscuchar3 = document.getElementById('btn-escuchar3');
+    
+    // Capturamos el párrafo por su ID
+    const parrafo3 = document.getElementById('parrafo-a-leer3');
+
+    if ('speechSynthesis' in window) {
+        
+        btnEscuchar3.addEventListener('click', () => {
+            // Cancelar cualquier reproducción previa activa
+            window.speechSynthesis.cancel();
+
+            // Extraemos el texto limpio del párrafo usando textContent
+            const textoLimpio3 = parrafo3.textContent.trim();
+
+            if (textoLimpio3) {
+                const utterance3 = new SpeechSynthesisUtterance(textoLimpio3);
+                utterance3.lang = 'es-ES'; // Idioma configurado en español
+                
+                // Reproducir
+                window.speechSynthesis.speak(utterance3);
+            }
+        });
+
+    } else {
+        alert("Tu navegador no soporta la reproducción de voz.");
+    }
+</script>
+
+
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
 
@@ -164,6 +276,8 @@
  <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"  src="./852c79ca-5d94-40ac-962b-292f2fce3f3e.jpg" alt="">
       </div>
    
+
+
       
   </body>
 </html>
